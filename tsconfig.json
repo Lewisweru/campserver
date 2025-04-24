@@ -1,0 +1,21 @@
+// /home/kish/GITHUB REPOS/server/tsconfig.json  <-- CORRECT PATH
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "lib": ["ES2023"],
+    "outDir": "./dist",         // Output relative to this tsconfig's location
+    "rootDir": "./src",         // Source root relative to this tsconfig's location
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {},
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts"],     // Include relative to this tsconfig's location
+  "exclude": ["node_modules", "dist", "scripts"] // Exclude relative to this tsconfig's location
+}
