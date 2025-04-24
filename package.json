@@ -1,39 +1,38 @@
 {
-    "name": "summercamp-backend",
-    "version": "1.0.0",
-    "description": "Backend API for Summer Camp Management",
-    "main": "dist/server.js",
-    "type": "commonjs",
-    "scripts": {
-      "dev": "nodemon --watch 'src/**/*.ts' --exec 'tsx' src/server.ts",
-      "build": "rimraf dist && tsc",
-      "start": "node dist/server.js",
-      "lint": "eslint . --ext .ts",
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "setup:admin": "tsx ./scripts/setupAdmin.ts"
-    },
-    "dependencies": {
-      "cors": "^2.8.5",
-      "dotenv": "^16.5.0",
-      "express": "^5.1.0",
-      "firebase-admin": "^13.2.0",
-      "mongodb": "^6.15.0"
-    },
-    "devDependencies": {
-      "@types/cors": "^2.8.17",
-      "@types/express": "^4.17.21",
-      "@types/node": "^22.14.1",
-      "eslint": "^9.12.0",
-      "firebase": "^11.6.0",
-      "nodemon": "^3.1.9",
-      "rimraf": "^5.0.10",
-      "tsx": "^4.19.3",
-      "typescript": "^5.6.3",
-      "typescript-eslint": "^8.8.1"
-    },
-    "engines": {
-      "node": ">=18.0.0"
-    },
-    "author": "Your Name",
-    "license": "ISC"
-  }
+  "name": "summercamp-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Summer Camp Management",
+  "main": "dist/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'tsx' src/server.ts",
+    "build": "node -e \"require('fs').rmSync('./dist', { recursive: true, force: true });\" && tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup:admin": "tsx ./scripts/setupAdmin.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.2.0",
+    "mongodb": "^6.15.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.12.0",
+    "firebase": "^11.6.0",
+    "nodemon": "^3.1.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
